@@ -1,5 +1,5 @@
 /* .sub{
-    height: 600px;
+    height: 200px;
     width: 600px;
     background-color: aqua;
     border: 1px solid black;
@@ -11,3 +11,31 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 } */
+input{
+    height: 20px;
+    width: 300px;
+    outline: none;
+    border: 2px solid black;
+    border-right: none;
+    margin-right: 0;
+}
+button{
+    height: 25px;
+    background-color: white;
+    border: 2px solid black;
+    border-left: none;
+    margin-left: 0;
+    cursor: pointer;
+}
+.opa{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    opacity: 0.6;
+}
+.div1{
+    height: 80px;
+    width: 80px;
+    background-color: blueviolet;
+    float:left;
+}

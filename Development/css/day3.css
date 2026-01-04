@@ -28,6 +28,6 @@ pre{
 }
 .aa:hover{
     color: aqua;
-    cursor:move;
-    /*cursor : curpointer,crosshair,auto,move,wait. */
+    cursor: wait;
+    /*cursor : pointer,crosshair,auto,move,wait. */
 }

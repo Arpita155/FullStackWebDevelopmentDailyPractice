@@ -1,5 +1,5 @@
 .xyz{
-    display: flex;
+    display:flex;
     justify-content: space-between;
     background-color: aqua;
     height: 100px;
@@ -27,6 +27,12 @@ span{
     margin: auto;
     background-color: brown;
     display: inline;
+}
+.x{
+    height: 50px;
+    width: 50px;
+    background-color: cadetblue;
+    margin: auto;
 }
 .bs{
     height: 90px;
