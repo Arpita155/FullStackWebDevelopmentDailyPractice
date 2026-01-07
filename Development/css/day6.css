@@ -1,0 +1,47 @@
+.show{
+    display: none;
+}
+.main:hover .show{
+    display: block;
+}
+.h{
+    display: none;
+    border: 2px solid black;
+}
+.h{
+    li{
+    border: 1px solid gray;
+    }
+}
+.link:hover .h{
+    display: block;
+}
+.para::first-line{
+    color: red;
+}
+.para::first-letter{
+    color: aqua;
+}
+li::marker{
+    color: red;
+}
+
+/* Combinator */
+/* i)Descendent combinator */
+/* .maind .y{
+    color: red;
+} */
+
+/* ii) Child combinator */
+.maind > .x{
+    color: green;
+}
+
+/* iii) Next sibling Combinator */
+/* .x + div{
+    color: aqua;
+} */
+ /* iv) Subsequent */
+ .x ~ div{
+    color: blue;
+ }
