@@ -1,0 +1,48 @@
+p::selection{
+    color: red;
+    background-color: aqua;
+}
+/* [class *="city"]{
+    color: pink;
+} */
+
+/* p{
+    color: green !important;
+} */
+
+.sup{
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dotted red;
+}
+.sub{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.main1:first-child{
+    color: red;
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+}
+.d3{
+    color: red;
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+}
+
+.pp{
+    border: 1px solid red;
+    span{
+    border: inherit;
+    }
+}
+
+
