@@ -1,0 +1,45 @@
+    /* Transform */
+button{
+    height: 40px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 5px;
+}
+button:hover{
+    transform: translate(100px,250px);
+    /* transform: rotate(90deg); */
+    /* transform: scale(1.2,1.2); */
+    /* transform: skew(20deg, 20deg); */
+
+    transform: matrix(2,0.5,0.5,2,100,100);
+
+}
+   /* Filter */
+.image1{
+    height: 300px;
+
+    filter: blur(3px);
+    filter: grayscale(0.6);
+}
+
+   /* Write something on an image */
+.container{
+    position: relative;
+    img{
+        height: 250px;
+        width: 100vw;
+    }
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: xx-large;
+}
+.img2{
+    height: 200px;
+}
+.img2:hover{
+    transform: scale(-1);
+}

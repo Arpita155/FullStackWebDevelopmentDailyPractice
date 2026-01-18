@@ -2,13 +2,13 @@ p::selection{
     color: red;
     background-color: aqua;
 }
-/* [class *="city"]{
+[class *="city"]{
     color: pink;
-} */
+}
 
-/* p{
+.city-d{
     color: green !important;
-} */
+}
 
 .sup{
     height: 300px;
@@ -23,10 +23,13 @@ p::selection{
     height: 100px;
     width: 100px;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main1:first-child{
-    color: red;
+    color: rgb(79, 234, 154);
     background-color: blue;
     height: 100px;
     width: 100px;
@@ -41,7 +44,7 @@ p::selection{
 .pp{
     border: 1px solid red;
     span{
-    border: inherit;
+        border: inherit;
     }
 }
 
