@@ -1,0 +1,54 @@
+ul{
+            display: flex;
+            list-style: none;
+            width: 400px;
+            justify-content: space-evenly;
+        }
+        li{
+            padding: 12px;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .active{
+            background-color: rgb(154, 236, 154);
+            border: 2px solid black;
+        }
+.below{
+    height: 300px;
+    width: 500px;
+    background-color: yellow;
+    z-index: 2;
+}
+.above{
+    position: absolute;
+    height: 35px;
+    width: 500px;
+    left: 40px;
+    top: 230px;
+    background-color: red;
+    z-index: -1;
+}
+
+.prop{
+    background-color: blue;
+    width: 500px;
+    display: flex;
+    justify-content: left;
+}
+.prop div{
+    background-color: gray;
+    padding: 5px;
+    width: 30px;
+
+    border: 1px solid black;
+}
+.abc{
+    flex-grow: 1;
+}
+img{
+    background-color: aqua;
+    height: 300px;
+    width: 400px;
+    /* object-fit: cover; */
+}
