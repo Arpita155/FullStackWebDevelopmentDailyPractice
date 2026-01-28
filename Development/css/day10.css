@@ -1,19 +1,21 @@
+/* Pgination */
 ul{
-            display: flex;
-            list-style: none;
-            width: 400px;
-            justify-content: space-evenly;
-        }
-        li{
-            padding: 12px;
-            border: 1px solid black;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .active{
-            background-color: rgb(154, 236, 154);
-            border: 2px solid black;
-        }
+    display: flex;
+    list-style: none;
+    width: 400px;
+    justify-content: space-evenly;
+}
+li{
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.active{
+    background-color: rgb(154, 236, 154);
+    border: 2px solid black;
+}
+/* Z-Index */
 .below{
     height: 300px;
     width: 500px;
@@ -29,7 +31,7 @@ ul{
     background-color: red;
     z-index: -1;
 }
-
+/* Flex grow & order */
 .prop{
     background-color: blue;
     width: 500px;
@@ -50,5 +52,7 @@ img{
     background-color: aqua;
     height: 300px;
     width: 400px;
-    /* object-fit: cover; */
+    object-fit: contain;
 }
+
+

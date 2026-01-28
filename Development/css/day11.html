@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grid</title>
 </head>
+<style>
+    .main{
+        display: grid;
+        /* grid-template-columns: 100px 100px 100px; */
+        /* grid-template-columns: 50% 50%; */
+        /* grid-template-columns: repeat(2,100px) */
+        grid-template-columns: 1fr 8fr 1fr;
+
+        /* grid-template-rows: 100px 100px; */
+        grid-template-rows: repeat(2,100px)
+    }
+
+    .gdiv{
+        height: 500px;
+        width: 500px;
+        background-color: aqua;
+        display: grid;
+        justify-content: space-evenly;
+        div{
+            display: grid;
+            /* justify-content: space-between;
+            align-items:center;
+            gap: 10px;  */
+            height: 50px;
+            width: 90px;
+            border: 1px solid black;
+        }
+        
+    }
+</style>
 <body>
     
+    <h3>Grid</h3>
+    <div class="main">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div><br><br>
+
+    <h3>Gap</h3>
+    <div class="gdiv">
+        <div>d1</div>
+        <div>d2</div>
+        <div>d3</div>
+        <div>d4</div>
+        <div>d5</div>
+        <div>d6</div>
+        <div>d7</div>
+        <div>d8</div>
+        <div>d9</div>
+    </div>
 </body>
 </html>
