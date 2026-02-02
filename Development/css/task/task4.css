@@ -62,65 +62,68 @@ footer {
 }
 @media screen and (max-width : 400px){
     header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: green;
-    padding: 20px;
-    font-size: large;
-}
-header div ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
-}
-.poster {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 500px;
-    font-size: x-large;
-    font-weight: 600;
-}
-img{
-    font-size: x-large;
-    font-weight: 600;
-    width: 500px;
-    border-radius: 20px;
-    outline: 1px solid orange;
-    outline-offset: 2px;
-    height: 280px;
-}
-.ques {
-    display: flex;
-    justify-content: space-evenly;
-}
-.items {
-    height: 200px;
-    width: 250px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-footer {
-    display: flex;
-    height: 200px;
-    justify-content: space-between;
-    background-color: orange;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 10px;
-}
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: green;
+        padding: 20px;
+        font-size: large;
+    }
+    header div ul {
+        display: block;
+        list-style: none;
+        gap: 20px;
+    }
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        padding-inline-start: 40px;
+        unicode-bidi: isolate;
+    }
+    .poster {
+        margin-top: 10px;
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 300px;
+        font-size: x-large;
+        font-weight: 600;
+    }
+    img{
+        margin-top: 17px;
+        font-size: x-large;
+        font-weight: 600;
+        width: 200px;
+        border-radius: 20px;
+        outline: 1px solid green;
+        outline-offset: 2px;
+        height: 250px;
+    }
+    .ques {
+        margin-top: 10px;
+        display: block;
+        justify-content: space-evenly;
+    }
+    .items {
+        height: 200px;
+        width: 250px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer {
+        display: flex;
+        height: 200px;
+        justify-content: space-between;
+        background-color: green;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 10px;
+    }
 }
