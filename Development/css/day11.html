@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid</title>
+    <title>Grid & Responsiveness</title>
 </head>
 <style>
     .main{
@@ -18,21 +18,37 @@
     }
 
     .gdiv{
-        height: 500px;
+        height: 600px;
         width: 500px;
         background-color: aqua;
         display: grid;
-        justify-content: space-evenly;
+        justify-content: space-between;
         div{
             display: grid;
-            /* justify-content: space-between;
+            position:relative;
+            justify-content: space-between;
             align-items:center;
-            gap: 10px;  */
-            height: 50px;
-            width: 90px;
+            gap: 10px;  
+            height: 5px;
+            width: 10px;
+            padding: 30px;
             border: 1px solid black;
         }
         
+    }
+
+    .res{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+    }
+
+    @media screen and (max-width:500px) {
+        .res{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+        }
     }
 </style>
 <body>
@@ -65,5 +81,10 @@
         <div>d8</div>
         <div>d9</div>
     </div>
+    <br><br><br>
+
+    <h3>Responsiveness</h3>
+    <div class="res">hi Arpita</div>
+    
 </body>
 </html>
