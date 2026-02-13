@@ -8,7 +8,7 @@ l = x.length   // for checking length
 console.log(l)  // 5
 
 c = x.charAt(1);   // for char at particular index
-console.log(c);  // e
+console.log(c);    // e
 
 s = x.slice(1,4)   // it will print between 1 to 3
 console.log(s)  // ell
