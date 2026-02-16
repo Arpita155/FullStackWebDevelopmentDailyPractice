@@ -13,9 +13,9 @@ console.log(c);    // e
 s = x.slice(1,4)   // it will print between 1 to 3
 console.log(s)  // ell
 
-console.log(x.slice(-2))   // lo
+console.log(x.slice(-3))   // loh
 
-z = x.substring(1,4)
+z = x.substring(-3)
 console.log(z)  //slice and substring do same but in substring if you give -ve value then it treat the -ve value as 0 and print the whole string.
 
 z =x.toUpperCase()   // convert the string to capital letter.
@@ -35,11 +35,11 @@ console.log(z)
 z =x.replaceAll("h","t")  // it will replace all "h" to "t"
 console.log(z)
 
-r= '12 25 20 23 45'
+r = '12 25 20 23 45'
 z = r.split(" ")    // it split the string 
-console.log(z)
+console.log(z)    // ['12', '25', '20', '23', '45']
 
-z = x.indexOf("l")   // it returns the index of the letter.
+z = x.indexOf("l")   // it returns the first index of the letter.
 console.log(z)
 
 z = x.lastIndexOf("l")    // it returns the the last index of the specific letter from last.
@@ -52,10 +52,10 @@ k = "cake, biscuit, apple , fish"    // convert a string to an array.
 z = k.split(",")
 console.log(z)
 
-console.log(typeof(12))   // it returns the type of the value.
+console.log(typeof(12))   //ans: number,   it returns the type of the value.
 
-console.log(1=='1')   // checks equality by converting both operand into a common data type.
-console.log(1==='1')   // checks equality but without converting both operand into a common data type.
+console.log(1=='1')   //ans: true,   checks equality by converting both operand into a common data type.
+console.log(1==='1')   //ans : false,    checks equality but without converting both operand into a common data type.
 
 
 
@@ -78,7 +78,7 @@ if(age < 10){
     console.log("old")
 }
 //====================== Switch case ===============
-b = 8
+b = 2
 switch(b){
     case 1:
         console.log("one")
