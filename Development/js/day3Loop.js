@@ -27,16 +27,14 @@ for(let i=1;i<=10;i++){
 */
 
 // -----------MATH Functions-------------
-
 console.log(Math.round(3.5))           // ans : 4     After the decimal point if the number is greater or equals to this number than it add +1.
 console.log(Math.ceil(10.1))           // ans : 11    Math.ceil() function is used to round a number up to the nearest integer.
 console.log(Math.floor(9.35))         //  ans : 9     It removes the total number after point, only print the Integer number.
 console.log(Math.pow(2,3))            //  ans : 8     power of 2 with 3,  2^3=8 
-console.log(Math.sqrt(4))             //  ans : 2     sqrt(4)= 2
+console.log(Math.sqrt(4))             //  ans : 2     sqrt(4) = 2
 console.log(Math.max(4,21,1,42))      //  ans : 42   because 42 is the maximum number between all number.
-console.log(Math.min(6,1,3,4))       //  ans : 1   because 42 is the minimum number between all number.
-console.log(Math.random())           //  It generates random decimal number. such as ex: 0.8742165706265218
-
+console.log(Math.min(6,1,3,4))       //   ans : 1   because 14 is the minimum number between all number.
+console.log(Math.random())           //   It generates random decimal number. such as ex: 0.8742165706265218
 
 
 //---------choose the correct number game--------- 
@@ -76,7 +74,7 @@ console.log("Number vowels = "+cnt)   // 3
 console.log("number of consonant = "+(s.length-cnt))   // 5
 */
 
-//-----Q4. If you want to print short form of the name by taking the first letter of every word(apjak)------
+// Q4. If you want to print short form of the name by taking the first letter of every word(apjak)------
 str = "abdul pakir janir abdul kalam"
 let arr = str.split(" ")
 let ans = ""
