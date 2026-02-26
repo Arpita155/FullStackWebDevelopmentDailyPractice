@@ -11,8 +11,8 @@ console.log(a.pop())   // pop delete the last element of the array
 
 // shift() and unshift() Method
 let x = [1,2,3,4,5]
-// x.shift()    // will pop the first element
-x.unshift(10)    // will add something to the first position
+// x.shift()    // It will pop the first element
+x.unshift(10)    //It  will add something to the first position
 console.log(x)
 
 // Array Length

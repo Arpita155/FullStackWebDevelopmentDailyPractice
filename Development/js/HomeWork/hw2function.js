@@ -37,7 +37,32 @@ function calculateDigit(n){
     console.log("Digit of the number "+temp +" is : "+d)
 }
 calculateDigit(1234)
+
 //Q3. Write a function which will convert a number to binary 
+const binaryConvert=(num)=>{
+    let ans = ""
+    while(num > 0){
+        let rem = num%2;
+        ans += rem
+        num=Math.floor(num/2)
+    }
+    return ans ? ans : "0"
+}
+binaryConvert(10)
+
+// function convertDecimaltoBinary(n){
+//     temp = n;
+//     ans = 0;
+//     pow = 1;
+//     while(n > 0){
+//         rem = n%2;
+//         ans += (rem*pow);
+//         pow = pow*10;
+//         n= Math.floor(n/2)
+//     }
+//     console.log("Binary conversion of the number "+temp+" is : "+ans)
+// }
+// convertDecimaltoBinary(10)
 
 //Q4. Write a function which will return the unique elements in array[Hard]
 let arr = [1,2,3,4,8,1,2,3,5,6,]
@@ -58,12 +83,38 @@ const uniqueElement=(arr)=>{
     return ans;
 }
 console.log(uniqueElement(arr))
+
 //Q5. Write a function which will return all leaders in an array [Medium]
 // Means all the number present to right will be lower than that number 
 // Example - [12,47,22,11,7,9] here leaders = 9,11,22,47 
+//Approach-1
 let ar = [12,47,22,11,7,9]
-function leader(arr){
-    for(let i=arr.length-1;i>=0;i--){
-        
+function leader(ar){
+    ans = []
+    for(let i=0;i<ar.length;i++){
+        flag = true;
+        for(let j=i+1;j<ar.length;j++){
+            if(ar[i]<ar[j]){
+                flag=false;
+            }
+        }
+        if(flag){
+            ans.push(ar[i]);
+        }
+    }
+    console.log(ans)
+}
+leader(ar)
+
+// Approach-2
+/*const arr = [12,47,,22,11,7,9]
+let max = arr[arr.length-1]
+const output = [arr[arr.length-1]]
+for(let i=arr.length-2;i>=0;i--){
+    if(arr[i] >= max){
+        output.push(arr[i])
+        max = arr[i]
     }
 }
+console.log(output)
+*/
