@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    
+    <h1>Second miniproject  -- > change box color</h1>
+
+    <div class="box" id="box">
+
+    </div>
+    <br>
+
+    <button onclick="updateRed()">Red</button>
+    <button onclick="updateYellow()">Yellow</button>
+    <button onclick="updateGreen()">Green</button>
+    <button onclick="updateback()">No color</button>
+</body>
+<script>
+    function updateback(){
+        document.getElementById("box").style.backgroundColor = "white";
+    }
+    function updateRed(){
+        document.getElementById("box").style.backgroundColor = "red";
+    }
+    function updateGreen(){
+        document.getElementById("box").style.backgroundColor = "green";
+    }
+    function updateYellow(){
+        document.getElementById("box").style.backgroundColor = "yellow";
+    }
+</script>
+</html>

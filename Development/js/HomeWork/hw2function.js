@@ -107,7 +107,7 @@ function leader(ar){
 leader(ar)
 
 // Approach-2
-/*const arr = [12,47,,22,11,7,9]
+arr = [12,47,,22,11,7,9]
 let max = arr[arr.length-1]
 const output = [arr[arr.length-1]]
 for(let i=arr.length-2;i>=0;i--){
@@ -117,4 +117,3 @@ for(let i=arr.length-2;i>=0;i--){
     }
 }
 console.log(output)
-*/
