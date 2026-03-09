@@ -1,3 +1,5 @@
+// -------------------------Object--------------------
+
 // Creatae 3 objects of School, Tiger, crow.
 var Tiger = {
     name : "Royal bengal tiger",
