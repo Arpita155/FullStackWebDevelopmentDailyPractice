@@ -40,7 +40,7 @@ setTimeout(()=>{
 // SetInterval    -- > it will execute repeatedlly 
 // setInterval(()=>{
 //     console.log("Interval !!")
-// },300)
+// },3000)
 
 //Ex-2
 let x=1

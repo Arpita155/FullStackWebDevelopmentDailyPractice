@@ -8,25 +8,20 @@
 <body>
     
     <h1 id="dm">DOM -- > Document Object Model</h1>
+
     <!-- Ex1 of DOM-->
     <h2 id = "abc">Hello</h2>
-    <button onclick="update()">Modify</button>
+    <button onclick="update()">Modify</button><br><br><br>
 
-    <div>
-        <h3>Counter : <span id="counter">00</span></h3>
-        <button onclick="increment()">Increment</button>
-        <button onclick="decrement()">Decrement</button>
-        <button onclick="reset()">Reset</button>
-    </div>
-
+    <!-- Ex2 -->
     <div>
         Fruit : <span id="fruit">Mango</span><br>
-        <button onclick="update()">Edit</button>
+        <button onclick="update1()">Edit</button>
         <br><br>
         <div>
             <input type="text" id="name" placeholder="Enter name">
             <input type="text" id="age" placeholder="Enter age">
-            <input type="text" id="class" placeholder="Enter class">
+            <input type="text" id="class" placeholder="Enter class"><br>
             <button onclick="ADD()">Add all data</button>
         </div>
     </div>
@@ -48,39 +43,12 @@
         document.getElementById("abc").innerHTML = "Bye"
     }
 
-    
 
-    let Counter = document.getElementById("counter")
-    let count = 0
-    function increment(){
-        count++
-        Counter.innerHTML = count
-    }
-
-    function decrement(){
-        count--
-        Counter.innerHTML = count
-    }
-
-    function reset(){
-        count = 0
-        Counter.innerHTML = count
-    }
-
-
+    // Ex2
     let fruit = document.getElementById("fruit")
-
-    // function update(){
-    //     let x = prompt("Enter fruit name ")
-    //     fruit.innerHTML = x;
-    // }
-
-
-
-    function ADDName(){
-        let data = document.getElementById("name").value
-        console.log("new user added !")
-        console.log("name added : "+data)
+    function update1(){
+        let x = prompt("Enter fruit name ")
+        fruit.innerHTML = x;
     }
 
     function ADD(){

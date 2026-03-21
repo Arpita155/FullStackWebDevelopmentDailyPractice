@@ -47,5 +47,5 @@ var person = {
 console.log(person)
 console.log(person.study("js"));
 
-// What you found interesting in js ?
+//Q. What you found interesting in js ?
 // Currently i am learning js 

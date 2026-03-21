@@ -1,8 +1,11 @@
-let arr = [1,2,3,4,5]
-arr.push(10)
-console.log(arr)
-arr.pop()
-console.log(arr)
-
-
-
+try{
+    // throw new Error("Some error occured !")
+    con.ed(abv)
+}
+catch(e){
+    
+    console.log(e.message)
+    console.log("error handled")
+}finally{
+    console.log("Execution completed !")
+}

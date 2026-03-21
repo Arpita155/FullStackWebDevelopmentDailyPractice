@@ -28,9 +28,9 @@ welcome();
 //4. IIFE - Immediately Invoked Function Expression   (I will execute the function when I declare it)
 (()=>{console.log("IIFE ")})()
 
-// ------------spread operator-------------
+// ------------spread operator-------------  It gives space between each letter/element.
 x = "Arpita sahoo"
-console.log(...x)
+console.log(...x)  // A r p i t a   s a h o o
 
 let ar = [12,34,123,76,2]
 console.log(Math.max(...ar))
@@ -136,7 +136,7 @@ let s = []
 for(let i=0;i<m1.length;i++){
     s[i] = []
     for(let j=0;j<m1[0].length;j++){
-        s[i][j]=m1[i][j]+m2[i][j]
+        s[i][j] = m1[i][j]+m2[i][j]
     }
 }
 for(let i=0;i<m1.length;i++){

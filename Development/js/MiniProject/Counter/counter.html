@@ -3,17 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MiniProject Counter</title>
 </head>
 <body>
     
-    <h2>Counter </h2>
+    <h2> MiniProject Counter </h2>
     <div>
         <h3>Counter : <span id="counter">00</span></h3>
-        <button>Increment</button>
-        <button>decrement</button>
-        <button>reset</button>
+        <button onclick="increment()">Increment</button>
+        <button onclick="decrement()">Decrement</button>
+        <button onclick="reset()">Reset</button>
     </div>
 
 </body>
+
+<script>
+
+    let Counter = document.getElementById("counter")
+    let count = 0
+    function increment(){
+        count++
+        Counter.innerHTML = count
+    }
+
+    function decrement(){
+        count--
+        Counter.innerHTML = count
+    }
+
+    function reset(){
+        count = 0
+        Counter.innerHTML = count
+    }
+
+</script>
+
 </html>

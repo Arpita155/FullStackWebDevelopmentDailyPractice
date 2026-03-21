@@ -19,7 +19,7 @@ console.log(pass.length);
 console.log(fail.length);
 
 result = []
-resul = Marks.map((x)=>Marks[x] > 34 ? result.push("pass") : result.push("fail"));
+resul = Marks.map((x)=>x > 34 ? result.push("pass") : result.push("fail"));
 // resul = Marks.filter((element) => element>34 ? result.push("pass"):result.push("fail"))
 console.log(result)
 

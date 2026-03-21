@@ -1,4 +1,4 @@
-//----------Class-------------------
+//------------Class-------------------
 // A class can have only one constructor.
 
 //Example1 : create a player class.

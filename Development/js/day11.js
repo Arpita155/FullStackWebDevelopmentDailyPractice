@@ -5,8 +5,8 @@ class Car {
     value = 1
     constructor(obj={}){
         if(Object.name)this.name = obj.name
-        if(Object.year) this.year= obj.year
-        if(Object.values) this.value=obj.value
+        if(Object.year)this.year= obj.year
+        if(Object.value) this.value=obj.value
     }
 
     details(){
