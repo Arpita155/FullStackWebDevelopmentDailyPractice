@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #abc{
+        background-color: yellow;
+        margin: 2px;
+        width: auto;
+    }
+</style>
+<body>
+    
+    Fruits
+    <ul id="items">
+
+    </ul>
+
+    Name and Age
+    <ul id="nameAge">
+
+    </ul>
+
+    <h1>User Information</h1>
+    <div id="info">
+
+    </div>
+
+    <h1>Product</h1>
+
+    <!--Home  Task  -->
+    <h2>Print City</h2>
+    <ul id="city">
+
+    </ul>
+
+    <h2>Name and Mobile Number</h2>
+    <ul id="nameMobile">
+
+    </ul>
+
+    <h2>Language and it's Usecase</h2>
+    <ul id="languageUsecase">
+
+    </ul>
+
+</body>
+
+<script>
+    // Fruits
+    let items = ["Apple","mango","banana"]
+    let list = document.getElementById("items")
+
+    for(let i=0;i<items.length;i++){
+        list.innerHTML += "<li>"+items[i]+"</li>";
+    }
+
+    // name array  age array 
+    let name = ["arpita","sampa","rudra"]
+    let age = [20,20,20]
+    let list1 = document.getElementById("nameAge")
+    for(let i=0;i<name.length;i++){
+        list1.innerHTML += "<li id='abc'>"+name[i] +" : "+age[i]+"</li>";
+    }
+
+    // User Information (Object)
+    let user={
+        name : "Arpita",
+        age : 20,
+        college : "SVU"
+    }
+    document.getElementById("info").innerHTML += "<div>Name : "+user.name +"</div>"
+    document.getElementById("info").innerHTML += "<div>Age : "+user.age +"</div>"
+    document.getElementById("info").innerHTML += "<div>College : "+user.college +"</div>"
+
+    // product
+    // let products = []
+    // async function fetchProduct(params) {
+    // }
+
+    // ---------FETCH DATA FROM BACKEND-------
+    // fetch("https://fakestoreapi.com/products").then(res => res.json()).then(data => executer(data))
+    // function executer(d){
+    //     console.log(d)
+    // }
+
+
+    // Task 
+    // Q1. City
+    let City = ["kolkata","bangalore","barrackpore","Mumbai"]
+    
+    for(let i=0;i<City.length;i++){
+        document.getElementById("city").innerHTML += "<li>"+ City[i]+"</li>";
+    }
+    
+
+    //Q2. Name and mobile number
+    let Name = ["Dip","Krishna","Mamon","Rud"]
+    let mobile = [9046563421,8976453421,9056432152,9879654312]
+    for(let i=0;i<Name.length;i++){
+        document.getElementById("nameMobile").innerHTML += "<li>"+Name[i]+" : "+mobile[i]+"</li>"
+    }
+
+    // Q3. language [c,js,python]  and use [os,server side,data science]
+    let language = ["c","js","python"]
+    let useCase =  ["os","server side","data science"]
+
+    for(let i=0;i<language.length;i++){
+        document.getElementById("languageUsecase").innerHTML += "<li>"+language[i]+" : "+useCase[i]+"</li>"
+    }
+
+</script>
+</html>
