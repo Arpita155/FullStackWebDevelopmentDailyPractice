@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<style>
+    .maindiv{
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(200, 205, 205);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .firstdiv{
+        margin-bottom: 290px;
+    }
+    .secdiv:hover{
+        background-color: rgb(211, 228, 125);
+        height: 120px;
+        width: 350px;
+    }
+    .secdiv{
+        height: 100px;
+        width: 300px;
+        background-color: rgb(220, 64, 121);
+        box-shadow: 2px 3px 1px black;
+        border-radius: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h2{
+        margin-top: 290px;
+        margin-left: 70px;
+    }
+</style>
+<body>
+
+    <div class="maindiv">
+        <h2>This is my clock</h2>
+        <div class="firstdiv" onclick="setTime()">
+            <div class="secdiv">
+                <h3 id="hour">00</h3> <b>&nbsp;: H</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                <h3 id="min">00</h3> <b>&nbsp;: M</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                <h3 id="sec">00</h3> <b>&nbsp;: S</b>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+
+    setInterval(()=>{
+        let date = new Date();
+        document.getElementById("hour").innerHTML = date.getHours();
+        document.getElementById("min").innerHTML = date.getMinutes();
+        document.getElementById("sec").innerHTML = date.getSeconds();
+    },1000)
+    
+</script>
+</html>

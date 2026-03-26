@@ -5,15 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniProject Counter</title>
 </head>
+<style>
+    body{
+        background-color: rgb(164, 211, 211);
+    }
+    .maindiv{
+        margin-top: 200px;
+    }
+    button{
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+    }
+</style>
 <body>
     
-    <h2> MiniProject Counter </h2>
-    <div>
-        <h3>Counter : <span id="counter">00</span></h3>
-        <button onclick="increment()">Increment</button>
-        <button onclick="decrement()">Decrement</button>
-        <button onclick="reset()">Reset</button>
-    </div>
+    <center>
+        <div class="maindiv">
+            <h2> MiniProject Counter </h2>
+            <div>
+                <h3>Counter : <span id="counter">00</span></h3>
+                <button onclick="increment()" style="background-color: rgb(112, 233, 47);">Increment</button>
+                <button onclick="decrement()" style="background-color: rgb(246, 110, 132);">Decrement</button>
+                <button onclick="reset()" style="background-color: yellow;">Reset</button>
+            </div>
+        </div>
+        
+    </center>
+    
 
 </body>
 
