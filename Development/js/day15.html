@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(174, 200, 200);
+    }
+</style>
+<body>
+    
+    <h3>Note-App</h3>
+    <p>ADD NOTE</p>
+    title : <input type="text" name="" id="Title"><br><br>
+    content : <textarea name="" id="Content"></textarea>
+    <button onclick="adder()">ADD</button><hr>
+
+
+
+    <div id="show">
+        
+    </div>
+</body>
+<script>
+    let notes = [{
+        title : "Java",
+        content : "java is a programming language."
+    },{
+        title : "js",
+        content : "js is a programming language used in frontend."
+    }]
+
+    function populate(){
+        let area = document.getElementById("show")
+        area.innerHTML = ""
+
+        for(let i=0;i<notes.length;i++){
+            area.innerHTML += `<div>
+            <h3 style="color: green;">${notes[i].title}</h3>
+            <p>${notes[i].content}</p>
+            <button onclick='del(${i})' style="background-color: red;">Delete</button>
+        </div><hr>`
+        }
+    }
+    populate()
+
+    function adder(){
+        let x = document.getElementById("Title").value
+        let y = document.getElementById("Content").value
+
+        notes.push({title : x, content : y})
+        populate()
+    }
+    
+    function del(x){
+        temp =[]
+        let j = 0
+        for(let i=0;i<notes.length;i++){
+            if(i!=x){
+                temp[j++]= notes[i]
+            }
+        }
+        notes = temp
+        populate()
+    }
+
+</script>
+</html>
