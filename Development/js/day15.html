@@ -9,28 +9,70 @@
     body{
         background-color: rgb(174, 200, 200);
     }
+    .btn{
+        height: 30px;
+        width: 90px;
+        border-radius: 5px;
+        color: white;
+        font-weight: 700;
+    }
+    #Title{
+        height: 26px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    #Content{
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    .addbtn{
+        height: 28px;
+        width: 80px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: yellow;
+        border: 1px solid black;
+    }
+    /* .div1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        margin-left: 640px;
+        .addbtn{
+            margin-top: 5px;
+        }
+    } */
 </style>
 <body>
     
-    <h3>Note-App</h3>
-    <p>ADD NOTE</p>
-    title : <input type="text" name="" id="Title"><br><br>
-    content : <textarea name="" id="Content"></textarea>
-    <button onclick="adder()">ADD</button><hr>
+    <center>
+        <h3 style="color: rgb(187, 13, 155);">Note-App</h3>
+        <p style="color: rgb(88, 66, 210);">ADD NOTE</p>
+        title : <input type="text" name="" id="Title" style="background-color: rgb(151, 222, 101);"><br><br>
+        <div class="div1">
+            content : <textarea name="" id="Content" style="background-color: rgb(151, 222, 101);"></textarea>
+            <div id="formbtn"><button id="addbtn" class="addbtn" onclick="adder()">ADD</button></div><hr>
+        </div>
+        <center><p id="warn" style="color: red;"></p></center>
 
 
 
-    <div id="show">
-        
-    </div>
+        <div id="show">
+            
+        </div>
+    </center>
 </body>
 <script>
     let notes = [{
         title : "Java",
-        content : "java is a programming language."
+        content : "java is a programming language.",
+        star : false
     },{
         title : "js",
-        content : "js is a programming language used in frontend."
+        content : "js is a programming language used in frontend.",
+        star : false
     }]
 
     function populate(){
@@ -41,7 +83,9 @@
             area.innerHTML += `<div>
             <h3 style="color: green;">${notes[i].title}</h3>
             <p>${notes[i].content}</p>
-            <button onclick='del(${i})' style="background-color: red;">Delete</button>
+            <button class="btn" onclick='del(${i})' style="background-color: red;">Delete</button>
+            <button id='ebtn' class="btn" onclick='edit(${i})' style="background-color: green;">Edit</button>
+            <button id='star' class="star" onclick='star(${i})' style="background-color: orange;">${notes[i].star ? "Unstar" :"Star"}</button>
         </div><hr>`
         }
     }
@@ -51,8 +95,15 @@
         let x = document.getElementById("Title").value
         let y = document.getElementById("Content").value
 
-        notes.push({title : x, content : y})
+        if(x=="" || y==""){
+            document.getElementById("warn").innerHTML += "add title and description"
+            return
+        }
+
+        notes.push({title : x, content : y,star:false})
         populate()
+        document.getElementById("Title").value=""
+        document.getElementById("Content").value=""
     }
     
     function del(x){
@@ -64,6 +115,30 @@
             }
         }
         notes = temp
+        populate()
+    }
+
+    function edit(i){
+        document.getElementById("Title").value = notes[i].title;
+        document.getElementById("Content").value = notes[i].content;
+
+        document.getElementById('formbtn').innerHTML = `<button onclick="update(${i})">Edit</button>`
+    }
+
+    function update(i){
+        notes[i].title = document.getElementById("Title").value
+        notes[i].content = document.getElementById("Content").value
+
+        document.getElementById('formbtn').innerHTML = `<button id="addbtn" class="addbtn" onclick="adder()">ADD</button></div>`
+        populate()
+
+        document.getElementById("Title").value=""
+        document.getElementById("Content").value=""
+
+    }
+
+    function star(i){
+        notes[i].star = !notes[i].star
         populate()
     }
 
