@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="xyz">hi </div>
+
+    <div class="abc">hvghf</div>
+    <div class="abc">hvghf</div>
+    <div class="abc">hvghf</div>
+
+    <h1>this is h1 tag</h1>
+    <p>uigh</p>
+    <div>abc</div>
+    <div>pqr</div>
+    <div>xyz</div>
+
+</body>
+<script>
+    // By Id
+    // By Class Name (getElementsByClassName)
+    document.getElementsByClassName("abc")[0].innerHTML ="my first div"
+
+    let elements = document.getElementsByClassName("abc")[1].innerHTML
+    console.log(elements)
+
+    // By tag Name (getElementsByTagName)
+    for(let x of document.getElementsByTagName("div")){
+        console.log(x)
+    }
+
+    console.log(document.querySelector("div").innerHTML)
+    document.querySelector("#xyz").innerHTML = "Bye"    // it change hi to Bye
+</script>
+</html>

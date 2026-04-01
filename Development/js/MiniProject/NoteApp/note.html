@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+</head>
+<style>
+    body{
+        background-color: rgb(174, 200, 200);
+    }
+    .firstdiv{
+        height: 210px;
+        width: 300px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0.5px 1px 1px 2px rgb(107, 107, 107);
+    }
+    .btn{
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        color: white;
+        font-weight: 700;
+        background-image: url("Image/trash.png");
+        background-size:contain;
+        background-color: rgb(186, 186, 191);
+        margin-right: 5px;
+        border: none;
+    }
+    .star{
+        height: 30px;
+        width: 30px;
+        padding-left: 10px;
+        border-radius: 5px;
+        border: none;
+        background-image: url("Image/star\ \(1\).png");
+        background-size:contain;
+        background-color: rgb(186, 186, 191);
+    }
+    #ebtn{
+        height: 30px;
+        width: 30px;
+        padding-left: 10px;
+        border-radius: 5px;
+        background-image: url("Image/edit.png");
+        background-size:contain;
+        background-color: rgb(186, 186, 191);
+    }
+    #Title{
+        height: 26px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    #Content{
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    .addbtn{
+        height: 28px;
+        width: 80px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        margin-top: 5px;
+        border-radius: 5px;
+        background-color: yellow;
+        border: 1px solid black;
+    }
+    
+</style>
+<body>
+    
+    <center>
+        <div class="firstdiv">
+            <h3 style="color: rgb(187, 13, 155);">Note-App</h3>
+            <p style="color: rgb(88, 66, 210);">ADD NOTE</p>
+            title : <input type="text" name="" id="Title"><br><br>
+            <div class="div1">
+                content : <textarea name="" id="Content"></textarea><br>
+
+                <div id="formbtn"><button id="addbtn" class="addbtn" onclick="adder()">ADD</button></div><br><hr>
+            </div>
+            <center><p id="warn" style="color: red;"></p></center>
+
+            <div id="show">
+                
+            </div>
+        </div>
+        
+    </center>
+
+</body>
+<script>
+    let notes = [{
+        title : "Java",
+        content : "java is a programming language.",
+        star : false
+    },{
+        title : "js",
+        content : "js is a programming language used in frontend.",
+        star : false
+    }]
+
+    function populate(){
+        let area = document.getElementById("show")
+        area.innerHTML = ""
+
+        for(let i=0;i<notes.length;i++){
+            area.innerHTML += `<div>
+            <h3 style="color: green;">${notes[i].title}</h3>
+            <p>${notes[i].content}</p>
+            <button class="btn" onclick='del(${i})'></button>
+            <button id='ebtn' class="btn" onclick='edit(${i})'></button>
+            <button id='star' class="star" onclick='star(${i})'><img src="${!notes[i].star ? "liked.png":"edit.png"}" alt=""></button>
+        </div><hr>`
+        }
+    }
+    populate()
+
+    function adder(){
+        let x = document.getElementById("Title").value
+        let y = document.getElementById("Content").value
+
+        if(x=="" || y==""){
+            document.getElementById("warn").innerHTML += "add title and description"
+            return
+        }
+
+        notes.push({title : x, content : y,star:false})
+        populate()
+        document.getElementById("Title").value=""
+        document.getElementById("Content").value=""
+    }
+    
+    function del(x){
+        temp =[]
+        let j = 0
+        for(let i=0;i<notes.length;i++){
+            if(i!=x){
+                temp[j++]= notes[i]
+            }
+        }
+        notes = temp
+        populate()
+    }
+
+    function edit(i){
+        document.getElementById("Title").value = notes[i].title;
+        document.getElementById("Content").value = notes[i].content;
+
+        document.getElementById('formbtn').innerHTML = `<button onclick="update(${i})">Edit</button>`
+    }
+
+    function update(i){
+        notes[i].title = document.getElementById("Title").value
+        notes[i].content = document.getElementById("Content").value
+
+        document.getElementById('formbtn').innerHTML = `<button id="addbtn" class="addbtn" onclick="adder()">ADD</button></div>`
+        populate()
+
+        document.getElementById("Title").value=""
+        document.getElementById("Content").value=""
+
+    }
+
+    function star(i){
+        notes[i].star = !notes[i].star
+        populate()
+    }
+
+</script>
+</html>
