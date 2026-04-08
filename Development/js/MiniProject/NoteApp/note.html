@@ -7,7 +7,7 @@
 </head>
 <style>
     body{
-        background-color: rgb(174, 200, 200);
+        background-color: rgb(67, 77, 132);
     }
     .firstdiv{
         height: 210px;
@@ -24,7 +24,7 @@
         font-weight: 700;
         background-image: url("Image/trash.png");
         background-size:contain;
-        background-color: rgb(186, 186, 191);
+        background-color: rgb(67, 77, 132);
         margin-right: 5px;
         border: none;
     }
@@ -35,8 +35,9 @@
         border-radius: 5px;
         border: none;
         background-image: url("Image/star\ \(1\).png");
-        background-size:contain;
-        background-color: rgb(186, 186, 191);
+        background-size:cover;
+        margin-bottom: 50px;
+        background-color: rgb(67, 77, 132);
     }
     #ebtn{
         height: 30px;
@@ -45,7 +46,7 @@
         border-radius: 5px;
         background-image: url("Image/edit.png");
         background-size:contain;
-        background-color: rgb(186, 186, 191);
+        background-color: rgb(67, 77, 132);
     }
     #Title{
         height: 26px;
@@ -67,7 +68,14 @@
         background-color: yellow;
         border: 1px solid black;
     }
-    
+    #show{
+        height: 150px;
+        width: 800px;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+    }
+
 </style>
 <body>
     
@@ -79,20 +87,29 @@
             <div class="div1">
                 content : <textarea name="" id="Content"></textarea><br>
 
-                <div id="formbtn"><button id="addbtn" class="addbtn" onclick="adder()">ADD</button></div><br><hr>
+                <div id="formbtn"><button id="addbtn" class="addbtn" onclick="adder()">ADD</button></div><br><br><br>
             </div>
             <center><p id="warn" style="color: red;"></p></center>
 
-            <div id="show">
-                
-            </div>
+            
         </div>
         
     </center>
+    <div id="show">
+                
+    </div>
 
 </body>
 <script>
     let notes = [{
+        title : "Java",
+        content : "java is a programming language.",
+        star : false
+    },{
+        title : "js",
+        content : "js is a programming language used in frontend.",
+        star : false
+    },{
         title : "Java",
         content : "java is a programming language.",
         star : false
@@ -108,7 +125,7 @@
 
         for(let i=0;i<notes.length;i++){
             area.innerHTML += `<div>
-            <h3 style="color: green;">${notes[i].title}</h3>
+            <h3 style="color: yellow;">${notes[i].title}</h3>
             <p>${notes[i].content}</p>
             <button class="btn" onclick='del(${i})'></button>
             <button id='ebtn' class="btn" onclick='edit(${i})'></button>

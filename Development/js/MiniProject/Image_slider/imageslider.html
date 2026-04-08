@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height: 600px;
+    }
+    img{
+        height: 70vh;
+        width: 100vw;
+    }
+</style>
+<body>
+    
+    <div id="div1">
+        <!-- <img src="image/pic3.jpeg" alt=""> -->
+    </div>
+
+    
+</body>
+
+<script>
+
+    let images = ["image/Girlimage.jpg","image/writer.jpg","image/pic3.jpeg"]
+
+    i=0
+    function changePic(){
+
+        document.getElementById("div1").innerHTML = `<img src="${images[i]}" alt="">`
+
+        i++;
+        if(i==images.length) i=0;
+    }
+
+    setInterval( changePic ,3000)
+
+
+</script>
+</html>

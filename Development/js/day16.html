@@ -6,13 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="xyz">hi </div>
+    <h2 id="xyz">hi </h2>
 
-    <div class="abc">hvghf</div>
-    <div class="abc">hvghf</div>
-    <div class="abc">hvghf</div>
+    <div class="abc">div1</div>
+    <div class="abc">div2</div>
+    <div class="abc">div3</div>
 
-    <h1>this is h1 tag</h1>
+    <h1 id="h1tag">this is h1 tag</h1>
     <p>uigh</p>
     <div>abc</div>
     <div>pqr</div>
@@ -20,7 +20,9 @@
 
 </body>
 <script>
-    // By Id
+    // By Id ( getElementById )
+    document.getElementById("xyz").innerHTML = "This is from h2"
+
     // By Class Name (getElementsByClassName)
     document.getElementsByClassName("abc")[0].innerHTML ="my first div"
 
@@ -32,7 +34,8 @@
         console.log(x)
     }
 
+    // By querySelector
     console.log(document.querySelector("div").innerHTML)
-    document.querySelector("#xyz").innerHTML = "Bye"    // it change hi to Bye
+    document.querySelector("#h1tag").innerHTML = "Bye"    // it change hi to Bye
 </script>
 </html>

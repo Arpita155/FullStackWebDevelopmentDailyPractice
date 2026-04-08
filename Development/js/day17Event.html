@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2><u>Event</u> : Any action which user or browser can perform on page that is called Event</h2>
+
+    <h2>hey this is for event </h2>
+    <button id="hello" onclick="work()">click me</button>
+
+    <div onclick="work()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt neque provident illum unde repellendus quae rerum? Magni mollitia unde animi natus, quaerat tempora aliquam? Quisquam doloremque optio expedita laborum minus!</div>
+
+    <input type="text" name="" id="in" onchange="fn1()">
+
+    <h1 id="head">Hover me</h1>
+
+    <button onmouseleave="fn2()">leave the mouse</button>  
+    <button onmouseenter="fn3()">enter the mouse</button>
+
+
+</body>
+
+<script>
+    console.log("hello")
+
+    // 1.onclick
+    function work(){
+        console.log("btn clicked !")
+    }
+    function Click(){
+        console.log("Function Clicked")
+    }
+    document.getElementById("hello").onclick = Click
+
+    // 2.onload
+    function load(){
+        console.log("load it !")
+    }
+    document.body.onload = load
+
+    // 3.onchange
+    function fn(){
+        console.log("onchange function !")
+    }
+    function fn1(){
+        console.log("onchange from input")
+    }
+    document.getElementById("in").onchange = fn
+
+    // 4.onmouseover
+    function hovering(){
+        console.log("hover over heading !")
+    }
+    document.getElementById("head").onmouseover = hovering
+
+    // 5. onmouseleave
+    function fn2(){
+        alert("mouse out")
+        console.log("mouse out !")
+    }
+
+    // 6. onmouseenter
+    function fn3(){
+        alert("mouse enter")
+    }
+
+</script>
+</html>
