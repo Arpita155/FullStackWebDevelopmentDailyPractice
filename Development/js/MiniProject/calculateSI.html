@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="money" id="i1">
+    <input type="text" placeholder="rate" id="i2">
+    <input type="text" placeholder="time" id="i3">
+    <button onclick="calculate()">calculate</button><br><br><br>
+
+     <h2>Interest : <span id="id1">hi</span> </h2>
+     
+</body>
+<script>
+
+function calculate(){
+    let m = Number(document.getElementById("i1").value)
+    let r = Number(document.getElementById("i2").value)
+    let t = Number(document.getElementById("i3").value)
+
+    let si = (m*r*t/100)
+
+    document.getElementById("id1").textContent = si
+}
+</script>
+</html>

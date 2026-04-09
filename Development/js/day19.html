@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Heading</h1>
+    <div id="data"></div>
+
+    <br><br><h1 id="head">hi this is text content</h1><br><br><br>
+    <input type="text" id="inp" placeholder="update heading">
+    <button onclick="update()">update</button>
+
+    <div id="maindiv">
+        <h1 id="main">welcome</h1>
+        <p id="hi">hello</p>
+        <div id="ldiv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magni consectetur corrupti, molestiae numquam ab. Omnis in asperiores doloremque animi, nisi illo repudiandae aspernatur aliquam molestiae debitis velit ipsam vero!</div>
+        <button>btn</button>
+    </div>
+
+</body>
+<script>
+    // y=document.createElement("h1")
+    // z = document.createElement("h1")
+
+    // y.textContent = "data inserted"
+    // z.textContent = "Data inserted multiple times !"
+
+    // document.getElementById("data").append(y)
+    // document.getElementById("data").append(z)
+
+    function update(){
+        let head1 = document.getElementById("inp").value
+        document.getElementById("head").textContent = head1
+    }
+
+    //Traversal
+    let fdiv = document.getElementById("maindiv")
+
+    fdiv.firstElementChild.textContent ="hi this is arpita"
+    fdiv.lastElementChild.textContent = "bye bye"
+
+    let head1 = document.getElementById("hi")
+
+    head1.previousElementSibling.textContent = "hello world"
+
+    console.log(head1.parentElement)
+    console.log(head1.nextElementSibling.textContent)
+
+    fdiv.children[0].textContent = "welcome back"   // children performs as an array
+
+
+
+</script>
+</html>
