@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        height: 80px;
+        width: 80px;
+        background-color: aqua;
+        position: absolute;
+    }
+</style>
+<body>
+    
+    <button onclick="move()">Move</button>
+    <div id="box"></div>
+</body>
+
+<script>
+    let box = document.getElementById("box")
+
+    function move(){
+        let x= 0
+        let y =0
+        let r = 0
+
+
+        interval = setInterval(()=>{
+            box.style.top = x+"px"
+            box.style.left = y+"px"
+            box.style.borderRadius = r+"%"
+            x+=10
+            y+=8
+            r += r==50 ? 0 : 1
+
+            console.log(x)
+            console.log("r = "+r)
+
+
+            if(x > 500 && y >500){
+                clearInterval(interval)
+            }
+        },200);
+    }
+</script>
+</html>

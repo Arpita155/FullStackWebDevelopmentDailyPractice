@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        height: 200px;
+        width: 250px;
+    }
+</style>
+<body>
+
+    <h1 id="head">Hello world</h1>
+    <input type="text" name="" id="in"><br><br>
+    <button id ="btn">hover here</button><br><br><br>
+
+    <!-- hide image -->
+     <button id="bt" onclick="action()">Hide</button>
+     <img id="image" src="../html/Basic Structure/writer.jpg" alt="">
+    
+</body>
+<script>
+
+    function act(){
+        console.log("hello")
+    }
+    function chen(){
+        console.log("change the content")
+    }
+    function hov(){
+        console.log("you hover it!")
+        if(btn.textContent=="hover here"){
+            btn.textContent="hoverd"
+        }else{
+            btn.textContent = "hover here"
+        }
+    }
+
+    let head = document.getElementById("head")
+    let inp = document.getElementById("in")
+    let btn = document.getElementById("btn");
+
+    head.addEventListener("mouseout",act);
+    head.addEventListener("click",act);
+
+    inp.addEventListener("change",chen);
+
+    btn.addEventListener("mouseover",hov)
+
+    // hide image
+    function action(){
+
+        let image = document.getElementById("image")
+        let bt = document.getElementById("bt")
+
+        if(image.style.visibility == "hidden"){
+            image.style.visibility = "visible"
+        }else{
+            image.style.visibility = "hidden"
+        }
+
+        if(bt.textContent=="Hide") bt.textContent="Show"
+        else bt.textContent = "Hide"
+
+    }
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        height: 80px;
+        width: 80px;
+        background-color: aqua;
+        position: absolute;
+        margin: 20px;
+    }
+</style>
+<body>
+    
+    <button onclick="move()">Move</button>
+    <div id="box"></div>
+</body>
+
+<script>
+    let box = document.getElementById("box")
+
+    function move(){
+        let angel= 0
+
+        interval = setInterval(()=>{
+            box.style.transform = "rotateZ("+angel+"deg)"
+            angel += 10
+            console.log(angel)
+
+            if(angel == 200){
+                clearInterval(interval)
+            }
+        },100);
+    }
+</script>
+</html>
