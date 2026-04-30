@@ -1,6 +1,4 @@
-# basic
-
-# react basic
+# ------------react basic----------
 
 # React setup
  - npm create vite@latest filename
