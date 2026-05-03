@@ -45,7 +45,7 @@ ar.forEach(check)
 function checkLength(x){
     console.log(x +" length : "+x.length)
 }
-arr= ["arpita","sampa","sandip","amit"]
+arr = ["arpita","sampa","sandip","amit"]
 arr.forEach(checkLength)
 
 // Q3. arr = [23,12,56,677]

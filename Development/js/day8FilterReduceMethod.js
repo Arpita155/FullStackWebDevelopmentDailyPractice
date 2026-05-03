@@ -1,4 +1,4 @@
-// --------filter Method-----------
+// --------filter Method-----selects elements based on condition
 age = [12,54,23,7,45,32,41,18,21]
 
 voters = age.filter((element)=>element >=18)
@@ -29,7 +29,7 @@ fruits = ["bana","guava","pineapple","mango","papaya"]
 res = fruits.filter((element)=>element.length >=5)
 console.log(res)
 
-// Q3. -------reduce Method ----------
+// Q3. -------reduce Method ----------combine all elements into one value
 arr = [1,2,3,4,5]
 let sum = arr.reduce((p,c) => p+c)
 console.log(sum)

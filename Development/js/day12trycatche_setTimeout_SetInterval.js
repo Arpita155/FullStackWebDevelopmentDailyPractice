@@ -16,7 +16,8 @@ catch(e){
 // synchronous --> start now end now
 // asynchronous --> asynchronous is such a code that does not execute line by line , and it can wait for some computation to be fetched. 
 function work(){
-    setTimeout(()=>{
+    //setTimeout  --> It will execute after the given time.
+    setTimeout(()=>{       
         console.log("backend data")
     },5000)    // 1000 means 1s
 }
@@ -29,7 +30,7 @@ console.log("completed !")
 console.log(window)
 
 // Ex2 
-/*console.log("stating time : "+new Date())
+/*console.log("starting time : "+new Date())
 console.log("wait for 8 seconds ")
 setTimeout(()=>{
     

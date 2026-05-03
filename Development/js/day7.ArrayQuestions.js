@@ -3,7 +3,7 @@ arr = [12,1,4,23,54,21,5,3]
 arr.sort((a,b) => a-b)
 console.log(arr)
 
-// ---------Map method ------------
+// ---------Map method ----- It creates a new array by applying a function to every element.
 //Q1. Square of every array elements.
 const nums = [1,2,3,4,5,6,7]   // Using map
 const sq1 = nums.map((x) => x*x)   // [1, 4, 9, 16, 25, 36, 49]

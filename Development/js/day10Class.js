@@ -91,3 +91,6 @@ playlist = [
     new Music({song:"ab",singer:"x",language:"english"})
 ]
 console.log("Total song : "+playlist.length)
+
+
+
