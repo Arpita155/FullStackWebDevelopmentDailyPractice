@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: linear-gradient(to right,rgb(118, 145, 152),rgb(80, 192, 154));
+    }
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(209, 219, 69);
+        margin-top: 40px;
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+    button{
+        height: 25px;
+        width: 110px;
+        border-radius: 3px;
+        background-color: rgb(194, 201, 201);
+    }
+</style>
+<body>
+    
+    <center><h3>This page is showing my animation</h3>
+    <button onclick="move()">move the box</button>
+    <div id = "box">hello😊</div>
+</body>
+
+<script>
+
+    let box = document.getElementById("box")
+
+    function move(){
+        let angel= 0
+        let x= 0
+        let y =0
+        let r = 0
+
+        let size = 1;
+
+        interval = setInterval(()=>{
+            box.style.top = x+"px"
+            box.style.left = y+"px"
+            box.style.borderRadius = r+"%"
+            x+=10
+            y+=8
+            r += r==50 ? 0 : 1
+            box.style.transform = `scale(${size})`
+            size += 1
+
+            box.style.transform = "rotateZ("+angel+"deg)"
+            angel += 10
+            console.log(angel)
+
+            if(angel >= 400){
+                box.style.down = x+"px"
+                box.style.right = y+"px"
+                box.style.borderRadius = r+"%"
+                x-=10
+                y-=8
+                r += r==50 ? 0 : 1
+            }
+
+            if(angel == 730){
+                clearInterval(interval)
+            }
+        },100);
+    }
+</script>
+</html>
