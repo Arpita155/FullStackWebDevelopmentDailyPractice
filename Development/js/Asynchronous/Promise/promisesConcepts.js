@@ -1,9 +1,8 @@
+// whenever the code is executed line by line we call it sync.
+// whenever the code is executed not line by line we call it async.
 
-
-
-
-
-
+// CODE SEGMENT -> which is performing some type of input output operation then we cant gurrantee the time of completion of the code segment.
+//  It can be 2ms or 200 s. Here we use async operations for better execution of js.
 
 
 // promise  -- > promise is an object representing eventual(in future) completion or failure of an async operation.

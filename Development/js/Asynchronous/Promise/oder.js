@@ -1,4 +1,4 @@
-item = "waire"
+item = "fan"
 
 const promise = createOrder(item)
 
