@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4> This -> this is a keyword which refer window object. It behaves differently some times it refers a variable.</h4>
+</body>
+
+<script>
+    console.log(this);
+
+    obj = {
+        x : 20,
+        fn : function hi(){
+            console.log(this.x)
+        }
+    }
+    obj.fn()
+    
+</script>
+</html>
