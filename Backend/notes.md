@@ -23,3 +23,28 @@
  - a standard for writing JS .
  -  define js  syntax and the semantics of the core application 
  - current js version - ES16
+
+
+  # Node JS
+-------------
+ - Node js is a cross platform, open source js runtime environment
+ - js runtime environment
+ - cross platform means you can use node js in any of os like window , macOS, linux.
+ - js runtime environment - we can execute js here
+
+  # server
+  --------------
+ - server is a computer that provides services and resources to other computers.
+
+ client -> request -> server -> response -> client
+
+ # For checking node js version
+ - version -v
+
+ # Node REPL (nodejs terminal)
+ - Interactive shell in node js.
+ REPL -> READ EVAL PRINT LOOP.
+
+ # Frontend js -> cant access os , database, network
+ 
+ # node js provides special features for those and make js super powerful.

@@ -1,0 +1,1 @@
+fetch("https://nodejs.org/en").then((res)=>{console.log(res)})
