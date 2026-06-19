@@ -3,7 +3,7 @@ import React from 'react'
 export default function Searchbar() {
   return (
     <div>
-      <input type="text" className='border h-10 w-40 p-2'/>
+      <button><input type="text" placeholder='search &rarr;' className='ml-6 border h-10 w-60 p-2 '/> </button>
     </div>
   )
 }

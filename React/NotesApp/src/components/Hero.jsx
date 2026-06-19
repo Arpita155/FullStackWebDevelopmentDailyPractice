@@ -1,7 +1,7 @@
 export default function Hero(){
     return(
         <div>
-            This is my own blog App
+            <p className="ml-7">This is my own blog App</p>
         </div>
     )
 }
