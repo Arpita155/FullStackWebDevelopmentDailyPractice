@@ -45,6 +45,8 @@
  - Interactive shell in node js.
  REPL -> READ EVAL PRINT LOOP.
 
- # Frontend js -> cant access os , database, network
+ - Frontend js -> cant access os , database, network
  
- # node js provides special features for those and make js super powerful.
+ - node js provides special features for those and make js super powerful.
+
+ 
