@@ -1,19 +1,7 @@
-import React, { use } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Footer from './components/Footer'
-import Searchbar from './components/Searchbar'
-import Details from './components/Details'
-import CardCreation from './components/CardCreation'
-import ShowDetails from './components/ShowDetails'
+import React from 'react'
+import Details from './component/Details'
 
 export default function App() {
-
-  const details = [
-    {name : "Arpita",age : 21, city : "Kolkata"},
-    {name : "Rudra",age : 21, city : "Kolkata"},
-    {name : "Sampa",age : 20, city : "Brrackpore"},
-  ]
 
   const users = [
   {
@@ -248,55 +236,16 @@ export default function App() {
   }
 ]
 
-  let userComponent = []
-  // for(let user of details){
-  //   userComponent.push( <Details name={user.name} age ={user.age} city={user.city} />)
-  // }
   return (
     <div>
-
-        {/* Navber scetion */}
-        {/* <Navbar/> */}
-
-        {/* Hero Section */}
-        {/* <Hero/> */}
-
-        {/* Search Section */}
-        {/* <Searchbar/> */}
-
-        {/* footer section */}
-        {/* <Footer/><br /> */}
-
-        {/* Details */}
-        <h1 className='text-2xl text-center underline display-flex'>User Details</h1><br />
-        {/* <Details name="arpita" age={21} address="kolkata"/>
-        <Details name="dip" age={28} address="barrackpore"/>
-        <Details name="krishna" age={21} address="delhi"/> */}
-        {/* {
-          // userComponent
-
-          details.map((user,idx)=>(
-            <Details key={idx} name = {user.name} age={user.age} city = {user.city}/>  
-          ))
-
-        } */}
-
-        {/* Cards */}
-        {/* <div className='flex flex-wrap ml-20 m-3'>
-          {
-          users.map((user,idx)=>(
-            <CardCreation key={idx} name={user.name} username={user.username} email={user.email} street={user.address.street} 
-            suite={user.address.suite} city={user.address.city} zipcode={user.address.zipcode} lat={user.address.geo.lat} lng={user.address.geo.lng} />
-          ))
-        }
-        </div> */}
-
-        <ShowDetails />
-
-        
-
       
+      {/* Details */}
+      <h1 className='text-2xl text-center underline'>User Details</h1>
+      {
+        users.map((user,idx)=>(
+          <Details key={idx} name = {user.name} age={user.age} city = {user.city}/>  
+        ))
+      }
     </div>
-    
   )
 }

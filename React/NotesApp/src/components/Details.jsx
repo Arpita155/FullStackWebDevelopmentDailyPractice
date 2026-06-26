@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Details(props){
+export default function Details({name,age,city}){    // destructuring in fly 
 
     // const person = {
     //     // name : "Arpita sahoo",
@@ -12,15 +12,21 @@ export default function Details(props){
     //     address : props.address
     // }
 
+    // let {name,age,city} = props       // destructuring 
+
     return(
         <div className='p-3 border border-l w-72 bg-gray-300 rounded-xl m-3 outline outline-offset-2 outline-gray-60'>
             {/* <h3 className='font-semibold'>Name : {person.name}</h3>
             <h3>Age : {person.age}</h3>
             <h3>Address : {person.address}</h3> */}
 
-            <h3 className='font-semibold'>Name : {props.name}</h3>
-            <h3>Age : {props.age}</h3>
-            <h3>Address : {props.address}</h3>
+            <h3 className='font-semibold'>Name : {name}</h3>
+            <h3>Age : {age}</h3>
+            <h3>City : {city}</h3>
+
+            
+
+
         </div>
     )
 }
