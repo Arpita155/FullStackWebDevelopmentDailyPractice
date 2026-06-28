@@ -12,7 +12,6 @@ export default function ShowDetails() {
     <div>
         <div>{output}</div>
         <button onClick={updateOutput} className='border-1 p-2 bg-gray-500 cursor-pointer'>Update Output</button>
-      
     </div>
   )
 }

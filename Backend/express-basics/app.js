@@ -18,17 +18,22 @@ app.get("/",(req,res)=>{
     res.send("this is Home page")
 })
 
+// get about
 app.get("/about",(req,res)=>{
     res.send("this is about page")
 })
+
+// details about product
 app.get("/product",(req,res)=>{
     res.send(product)
 })
+
+// user page
 app.get("/user",(req,res)=>{
     res.send("this is user page")
 })
 
-
+// app.listen --> it is used to start a web server and bind it to a specific port and host.
 app.listen(3000,()=>{
     console.log("server is runing on port 3000")
     console.log("hey")
