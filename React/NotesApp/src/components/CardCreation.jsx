@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function CardCreation({name,username,email,street,suite,city,zipcode,geo,lat,lng}){    // destructuring in fly 
 
-
     return(
         <div className='p-3 border border-l h-80 w-72 bg-gray-300 rounded-xl m-6 outline outline-offset-2 outline-gray-60 '>
 
