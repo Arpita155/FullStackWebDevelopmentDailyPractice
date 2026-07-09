@@ -5,10 +5,13 @@ import Footer from './components/Footer'
 import Searchbar from './components/Searchbar'
 import Details from './components/Details'
 import CardCreation from './components/CardCreation'
-import ShowDetails from './components/ShowDetails'
+import UseState from './components/UseState'
 import PostDetails from './components/PostDetails'
 import Counter from './components/Counter'
 import AddFruits from './components/AddFruits'
+import Form from './components/Form' 
+import ConditionalRender from './components/ConditionalRender'
+import GenerateRandomNumber from './components/GenerateRandomNumber'
 
 
 export default function App() {
@@ -411,6 +414,7 @@ const posts = [
   // for(let user of details){
   //   userComponent.push( <Details name={user.name} age ={user.age} city={user.city} />)
   // }
+
   return (
     <div>
 
@@ -426,6 +430,7 @@ const posts = [
         {/* footer section */}
         {/* <Footer/><br /> */}
 
+
         {/* Details */}
         {/* <h1 className='text-2xl text-center underline display-flex'>User Details</h1><br />
         <Details name="arpita" age={21} address="kolkata"/>
@@ -433,7 +438,6 @@ const posts = [
         <Details name="krishna" age={21} address="delhi"/> */}
         {/* {
           // userComponent
-
           details.map((user,idx)=>(
             <Details key={idx} name = {user.name} age={user.age} city = {user.city}/>  
           ))
@@ -441,7 +445,7 @@ const posts = [
         } */}
 
         {/* Cards */}
-        {/* <h1 className='text-2xl text-center underline display-flex'>User Details</h1><br />
+        {/* <h1 className='text-2xl text-center underline display-flex'>Cards</h1><br />
         <div className='flex flex-wrap ml-20 m-3'>
           {
           users.map((user,idx)=>(
@@ -451,8 +455,9 @@ const posts = [
         }
         </div> */}
 
-        {/* update output */}
-        {/* <ShowDetails /> */}
+
+        {/* update output using useState*/}
+        {/* <UseState /> */}
 
 
         {/* Post Details */}
@@ -467,8 +472,18 @@ const posts = [
         {/* <Counter /> */}
 
         {/* Add Fruits */}
-        <AddFruits />
+        {/* <AddFruits /> */}
 
+          {/* Form creation */}
+        {/* <Form /> */}
+
+
+          {/* Conditional Rendering  */}
+        {/* <ConditionalRender age={21} /> */}
+
+
+        {/* Generate Random Number */}
+          {/* < GenerateRandomNumber /> */}
       
     </div>
     

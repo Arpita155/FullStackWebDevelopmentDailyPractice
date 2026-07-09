@@ -2,6 +2,6 @@ export function login(){
     console.log("Log in")
 }
 
-function signUp(){
+export default function signUp(){
     console.log("sign up")
 }

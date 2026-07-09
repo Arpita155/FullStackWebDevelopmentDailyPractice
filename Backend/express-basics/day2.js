@@ -6,15 +6,19 @@ day2.use(express.json())
 
 let users = []      // This array used to store data
 
+// day2.get("/",(req,res)=>{
+//     res.send("welcome to our website")
+// })
+
 // push data in an array users
-day2.get("/",(req,res)=>{
+day2.get("/signup",(req,res)=>{
     users.push(req.body)
-    res.send("recived")
+    res.status(201).end("new user signup")
 })
 
 // show users 
 day2.get("/users",(req,res)=>{
-    res.send(users)
+    res.status(200).send(users)
 })
 
 // Delete all users
@@ -33,7 +37,7 @@ day2.get("/login",(req,res)=>{
             return res.send("Login successfull !")
         }
     }
-    return res.send("Login Failed !")
+    return res.status(401).send("Login Failed !")
 })
 
 // day2.listen --> it is used to start a web server and bind it to a specific port and host.
@@ -41,4 +45,25 @@ day2.listen(3000,()=>{
     console.log("Server is running on PORT : 3000")
 })
 
+
+
+// -------------day3----------
+function first(req,res,next){
+    // res.send("first")
+    console.log("go to second")
+    next()
+    // second(req,res)
+}
+function second(req,res){
+    res.send("second")
+}
+function third(req,res){
+    res.send("third")
+}
+
+// day2.get("/",(req,res,next)=>{
+//     res.send("welcome to our website")
+// })
+
+day2.get("/",first,second,third)
 

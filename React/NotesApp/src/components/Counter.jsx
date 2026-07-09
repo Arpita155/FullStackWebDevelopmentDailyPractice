@@ -9,8 +9,8 @@ export default function Counter() {
       
       <div className='text-3xl mb-5 p-3'>Count : {count}</div>
       <div>
-        <button className='p-3 bg-red-200 cursor-pointer rounded-lg font-semibold hover:bg-red-600 mr-2' onClick={()=>{
-            setCount(count+1);
+        <button className='p-3 bg-red-200 cursor-pointer rounded-lg font-semibold hover:bg-red-600 mr-2' 
+        onClick={()=>{  setCount(count+1);
         }}>Increase</button>
         <button className='p-3 bg-red-200 cursor-pointer rounded-lg font-semibold hover:bg-red-600 mr-2' onClick={()=>{
             setCount(count-1);

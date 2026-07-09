@@ -1,5 +1,4 @@
 import React from 'react'
-import './Searchbar.css'
 
 export default function SearchBar() {
   return (

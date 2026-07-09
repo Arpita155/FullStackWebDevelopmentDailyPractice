@@ -24,8 +24,6 @@ export default function Details({name,age,city}){    // destructuring in fly
             <h3>Age : {age}</h3>
             <h3>City : {city}</h3>
 
-            
-
 
         </div>
     )

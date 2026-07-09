@@ -46,7 +46,19 @@
  REPL -> READ EVAL PRINT LOOP.
 
  - Frontend js -> cant access os , database, network
- 
  - node js provides special features for those and make js super powerful.
+
+ # How browser send request
+ - First of all browser convert the domain name to IP address
+ - For this conversion it takes help from DNS server
+ - then it send request to the IP address 
+
+ localhost -> 127.0.0.1 -> then the browser hit request
+
+ public IP - 192.168.56.1
+ local IP - 127.0.0.1
+
+ local ip  : port
+ 127.0.0.1 : 8000
 
  

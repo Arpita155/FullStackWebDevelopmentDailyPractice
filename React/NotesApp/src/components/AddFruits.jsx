@@ -17,6 +17,7 @@ export default function AddFruits() {
       <ul className='list-inside list-disc px-3'>
         {fruits.map((fruit,idx)=>( <li key={idx}>{fruit}</li>))}
       </ul>
+
     </div>
   )
 }
