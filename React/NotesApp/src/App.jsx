@@ -12,6 +12,7 @@ import AddFruits from './components/AddFruits'
 import Form from './components/Form' 
 import ConditionalRender from './components/ConditionalRender'
 import GenerateRandomNumber from './components/GenerateRandomNumber'
+import UseEffectDemo from './components/UseEffectDemo'
 
 
 export default function App() {
@@ -484,6 +485,8 @@ const posts = [
 
         {/* Generate Random Number */}
           {/* < GenerateRandomNumber /> */}
+
+          < UseEffectDemo />
       
     </div>
     
