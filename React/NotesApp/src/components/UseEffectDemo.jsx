@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import ToDoBox from './ToDoBox'
 
 export default function UseEffectDemo() {
 
@@ -13,13 +14,29 @@ export default function UseEffectDemo() {
         console.log("inside useEffect")
     },[])
 
+    useEffect(()=>{
+      async function DataFetch() {
+        const result = await fetch("https://dummyjson.com/todos")
+        const output = await result.json()
+        setData(output.todos)
+        console.log(output.todos);
+        
+      }
+      DataFetch()
+      console.log("UseEffect run")
+    },[])
+
   return (
     
     <div>
-      useEffect <br/>
-
+      {/* useEffect <br/>
       <input type="text" className='border-1' value={input} onChange={(e)=>{setInput(e.target.value)}} /> <br/> <br />
-      <input type="text" className='border ' onChange={(e)=>{setInput2(e.target.value)}} /> <br />
+      <input type="text" className='border ' onChange={(e)=>{setInput2(e.target.value)}} /> <br /> */}
+
+      <h3>TO DOs</h3>
+      <div className=''>
+        {data.map((todo)=> <ToDoBox key={todo.id} todo={todo} /> )}
+      </div>
     </div>
   )
 }
